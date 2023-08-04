@@ -1,0 +1,55 @@
+name: docs build
+
+on:
+  push:
+    branches:
+      # 确保这是你正在使用的分支名称
+      - main
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          # 获取所有标记和分支的所有历史记录（updatetime 必须，否则每次都会变化）
+          fetch-depth: 0
+          # 如果你文档需要 Git 子模块，取消注释下一行
+          # submodules: true
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+
+      - name: Build Docs
+        run: |-
+          pnpm run docs:build
+          > docs/.vuepress/dist/.nojekyll
+
+      - name: Deploy GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 这是文档部署到的分支名称
+          branch: gh-pages
+          folder: docs/.vuepress/dist
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy with rsync
+        run: rsync -avz ./docs/.vuepress/dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.DESTINATION_PATH }}

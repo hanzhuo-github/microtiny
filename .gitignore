@@ -1,0 +1,9 @@
+# Node modules
+**/node_modules/**
+
+# Cache
+**/.vuepress/.cache/**
+# Temp
+**/.vuepress/.temp/**
+# Output
+**/.vuepress/dist/**

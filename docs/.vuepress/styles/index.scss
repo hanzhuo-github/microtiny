@@ -1,0 +1,53 @@
+// your own styles
+// 填入此文件所有内容都将解析为标准 CSS，然后在主题和插件样式之后注入。
+
+// custom styles
+.vp-card-logo {
+    border-radius: unset;
+}
+
+
+// cover original styles
+#toc .toc-link.level3 {
+    -webkit-padding-start: 16px;
+    padding-inline-start: 16px;
+}
+
+#toc .toc-link.level4 {
+    -webkit-padding-start: 32px;
+    padding-inline-start: 32px;
+}
+
+// .vp-sidebar {
+//     -webkit-padding-start: 0;
+//     padding-inline-start: 0;
+// }
+
+
+// #toc {
+//     position: fixed;
+//     right: 0;
+//     left: unset;
+//     &::before {
+//         display: block;
+//         content: '';
+//         z-index: -1;
+//         position: fixed;
+//         top: var(--navbar-height);
+//         height: calc(100vh - var(--navbar-height));
+//         width: 1px;
+//         background-color: var(--mt-border-color-default);
+//     }
+//     .toc-wrapper::before {
+//         content: unset;
+//     }
+// }
+
+@media (min-width: 1440px){
+    #app {
+        --sidebar-space: var(--sidebar-width);
+    }
+    :root {
+        --content-width: calc(100vw - 40em)
+    }
+}
