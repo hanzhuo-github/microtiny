@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-72c72144","path":"/basic/character-encoding/","title":"Character Encoding","lang":"zh-CN","frontmatter":{"title":"Character Encoding","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"excerpt":""}');export{e as data};
