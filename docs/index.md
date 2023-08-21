@@ -6,7 +6,7 @@ title: 首页
 article: false
 description:
 heroText: Micro Tiny
-tagline: ssssss
+tagline: 
 # heroImage: images/avatar.svg
 # heroImageDark: images/avatar.svg
 # bgImage: images/avatar.svg
@@ -15,21 +15,13 @@ actions: [{
     text: '博客',
     link: '/blog',
     type: 'primary'
-}, {
-    text: '按钮2',
-    type: 'primary'
-}, {
-    text: '按钮3',
-    type: 'default'
 }]
 highlights: [{
     header: AI,
-    description: ,
-    image: images/avatar.svg,
+    # image: images/avatar.svg,
     # bgImage: images/avatar.svg,
     highlights: [{
         title: Hugging Face NLP,
-        description: 项目2.1的详情,
         link: ../ai/huggingface/index.md
     }]
 }]

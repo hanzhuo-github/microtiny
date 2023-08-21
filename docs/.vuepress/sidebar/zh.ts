@@ -57,5 +57,42 @@ export const zhSidebar = sidebar({
         }
       ],
     }
-  ]
+  ],
+  '/basic/character-encoding/': [
+    "Chapter1.md",
+    "Chapter2.md",
+    "Chapter3.md",
+  ],
+  '/basic/network/': [
+    "index.md",
+    {
+      text: '底层网络知识',
+      collapsible: true,
+      link: "/basic/network/section1/",
+      prefix: "section1/",
+      children: "structure",
+    }
+  ],
+  '/code/front-end/': [{
+    text: "JavaScript",
+    collapsible: true,
+    link: "/code/front-end/javascript/",
+    prefix: "javascript/",
+    children: "structure",
+  }],
+  '/code/data-structure-and-algorithm/': [
+    "index.md",
+    "array.md",
+    "linked-list.md",
+    "stack.md",
+    "queue.md",
+    "recursion.md",
+    // {
+    //   text: "数组",
+    //   collapsible: true,
+    //   link: "/code/data-structure-and-algorithm/array",
+    //   prefix: "array/",
+    //   children: "structure",
+    // }
+  ],
 })

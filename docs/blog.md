@@ -3,7 +3,7 @@
 home: true
 layout: BlogHome
 icon: home
-title: 哈哈
+title: 博客
 #heroImage: /logo.svg
 heroText: 小太阳好晒
 tagline: 

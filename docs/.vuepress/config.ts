@@ -37,6 +37,7 @@ export default defineUserConfig({
   ],
   alias: {
     '@MyCard': path.resolve(__dirname, './components/Card.vue'),
+    '@post': path.resolve(__dirname, '../post'),
   },
   pagePatterns: ['**/*.md', '!**/README.md', '!.vuepress', '!node_modules'],
 })
