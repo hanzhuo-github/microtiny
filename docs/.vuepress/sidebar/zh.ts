@@ -87,12 +87,6 @@ export const zhSidebar = sidebar({
     "stack.md",
     "queue.md",
     "recursion.md",
-    // {
-    //   text: "数组",
-    //   collapsible: true,
-    //   link: "/code/data-structure-and-algorithm/array",
-    //   prefix: "array/",
-    //   children: "structure",
-    // }
+    "sort.md",
   ],
 })

@@ -11,7 +11,6 @@ export const zhNavbar = navbar([
     icon: 'blog'
   }, {
     text: '计算机基础',
-    link: '/basic/',
     icon: 'computer',
     children: [
       {
@@ -25,7 +24,6 @@ export const zhNavbar = navbar([
     ],
   }, {
     text: '代码',
-    link: '/code/',
     icon: 'code',
     children: [
       {

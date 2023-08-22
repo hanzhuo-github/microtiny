@@ -61,7 +61,7 @@ article: false
         - LOWER_UP: 表示 L1 是启动的，即网线插着
         - MTU500: 最大传输单元 MTU 为 1500，以太网的默认值
             MTU 是 MAC 层的概念。以太网规定正文部分不允许超过 1500 字节。正文里有 IP 的头、TCP 的头、HTTP的头。如果放不下，就要分片传输。
-        - qdisc mq:  qdisc(queueing discipline)，排队规则。核如果需要通过某个网络接口发送数据包，它都需要按照为这个接口配置的 qdisc（排队规则）把数据包加入队列。
+        - qdisc mq:  qdisc(queueing discipline)，排队规则。如果需要通过某个网络接口发送数据包，它都需要按照为这个接口配置的 qdisc（排队规则）把数据包加入队列。
             - 最简单的 qdisc 是 pfifo，不对进入的数据包做任何处理，数据包采用先进先出的方式通过队列
             - pfifo_fast 稍微复杂一点，他的队列包括三个波段（band），在每个波段里使用先进先出。
                 - band 0 的优先级最高。
@@ -82,8 +82,8 @@ $ sudo ifconfig eth1 up
 @tab iproute2
 
 ```shell
-$ sudo ifconfig eth1 10.0.0.1/24
-$ sudo ifconfig eth1 up
+$ sudo ip addr add 10.0.0.1/24 dev eth1
+$ sudo ip link set up eth1
 ```
 :::
 
@@ -116,7 +116,7 @@ Linux 首先会判断，目的 IP 和源 IP 是否在同一网段，或者和我
 
 #### Step 1: DHCP Discover
 
-当一台机器新加入一个网络时，只知道自己的 MAC 地址。这时的沟通基本靠“吼”，我来啦，有人吗？这一步成为 **DHCP Discover**。
+当一台机器新加入一个网络时，只知道自己的 MAC 地址。这时的沟通基本靠“吼”，我来啦，有人吗？这一步称为 **DHCP Discover**。
 
 新来的机器使用 IP 地址 0.0.0.0 发送了一个广播包，目的 IP 是 255.255.255.255。广播包封装了 UDP，UDP 封装了 BOOTP。DHCP 是 BOOTP 的增强版，但是抓包后可能看到的名称还是 BOOTP 协议。
 
@@ -160,9 +160,9 @@ DHCP Server 仍然使用广播地址作为目的地址，因为此时请求分�
 
 ## 6. IP 地址回收和续租
 
-客户机在租期过去 50% 的时候，直接向为其提供 IP 的 DHCP Server 发送 DHCP request 消息包。客户机接收到该服务器回应的 DHCP ACK 消息包，会根据包中提供的新租期以及其他更新的 TCP/IP 参数，更新自己的配置。这样，IP 租用起更新就完成了。
+客户机在租期过去 50% 的时候，直接向为其提供 IP 的 DHCP Server 发送 DHCP request 消息包。客户机接收到该服务器回应的 DHCP ACK 消息包，会根据包中提供的新租期以及其他更新的 TCP/IP 参数，更新自己的配置。这样，IP 租用期更新就完成了。
 
-## 7. 与启动执行环境（PXE, Pre-boot Execution Environment）
+## 7. 预启动执行环境（PXE, Pre-boot Execution Environment）
 
 DHCP 协议中还有个细节。网络管理员不仅能自动分配 IP 地址，还能帮你自动安装操作系统！
 
