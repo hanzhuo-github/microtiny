@@ -73,6 +73,9 @@ export const zhSidebar = sidebar({
       children: "structure",
     }
   ],
+  '/basic/os/': [
+    "command.md",
+  ],
   '/code/front-end/': [{
     text: "JavaScript",
     collapsible: true,

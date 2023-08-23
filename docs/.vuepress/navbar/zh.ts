@@ -20,6 +20,10 @@ export const zhNavbar = navbar([
       {
         text: '计算机网络',
         link: '/basic/network/',
+      },
+      {
+        text: '操作系统',
+        link: '/basic/os/',
       }
     ],
   }, {
