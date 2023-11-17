@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-8fa0fce4","path":"/english-study/spoken-english/","title":"Spoken English","lang":"zh-CN","frontmatter":{"title":"Spoken English","article":false,"feed":false,"sitemap":false,"seo":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null}');export{e as data};

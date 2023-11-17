@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-47e2844c","path":"/english-study/spoken-english/question-bank/","title":"Question Bank","lang":"zh-CN","frontmatter":{"title":"Question Bank","article":false,"feed":false,"sitemap":false,"seo":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null}');export{e as data};

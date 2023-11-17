@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-b6223f88","path":"/ai/huggingface-nlp/section2/","title":"Section2","lang":"zh-CN","frontmatter":{"title":"Section2","article":false,"feed":false,"sitemap":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null,"excerpt":""}');export{e as data};

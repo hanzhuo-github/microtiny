@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-25e79b38","path":"/english-study/spoken-english/breakout-room/","title":"Breakout Room","lang":"zh-CN","frontmatter":{"title":"Breakout Room","article":false,"feed":false,"sitemap":false,"seo":false},"headers":[],"git":{},"readingTime":{"minutes":0,"words":1},"filePathRelative":null}');export{e as data};
