@@ -10,6 +10,20 @@ export const zhNavbar = navbar([
     link: '/blog/',
     icon: 'blog'
   }, {
+    text: '机器学习',
+    icon: 'sun',
+    children: [{
+      text: 'Hugging Face NLP',
+      link: '/ai/huggingface-nlp',
+    }, {
+      text: 'Deep RL',
+      link: '/ai/deep-rl',
+    }, {
+      text: '特征工程',
+      link: '/machine-learning/feature-engineering',
+    } 
+    ],
+  }, {
     text: '计算机基础',
     icon: 'computer',
     children: [
@@ -37,7 +51,34 @@ export const zhNavbar = navbar([
       {
         text: '数据结构与算法',
         link: '/code/data-structure-and-algorithm/',
+      },
+      {
+        text: '正则表达式',
+        link: '/code/re/',
       }
     ]
+  }, {
+    text: '英语',
+    icon: 'english',
+    children: [
+      {
+        text: '口语',
+        link: '/english-study/spoken-english/',
+        children: [{
+          text: '题库',
+          link: '/english-study/spoken-english/question-bank'
+        }, {
+          text: 'topics',
+          link: '/english-study/spoken-english/topics'
+        }, {
+          text: 'Breakout Room',
+          link: '/english-study/spoken-english/breakout-room'
+        }]
+      },
+      
+    ]
+  }, {
+    text: '其他',
+    link: '/other',
   }
 ])

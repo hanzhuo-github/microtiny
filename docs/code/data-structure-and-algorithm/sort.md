@@ -54,7 +54,7 @@ public void bubbleSort(int[] a, int n) {
     - 最坏：倒序，n次冒泡，$O(n^{2})$
     - 平均：$O(n^{2})$
         - 有序度 & 逆序度、满序度
-        - 分析：冒泡排序有两个原子操作（比较和交换）。每交换一次，有序度加 1。$交换次数 = 逆序度 = \frac{n(n-1)}{2}-初始有序度$。最坏情况下，初始有序度是 0，需要进行 $\frac{n(n-1)}{2}$ 次交换。最好情况下初始有序度是 $\frac{n(n-1)}{2}$，不需要进行交换。平均情况下，取中间值 $\frac{n(n-1)}{4}$。比较操作肯定比交换操作多，复杂度的上限是 $O(n^{2})$，所以平均情况下的时间复杂度是 $O(n^{2})$
+        - 分析：冒泡排序有两个原子操作（比较和交换）。每交换一次，有序度加 1。$\text{交}\text{换}\text{次}\text{数} = \text{逆}\text{序}\text{度} = \frac{n(n-1)}{2}-\text{初}\text{始}\text{有}\text{序}\text{度}$。最坏情况下，初始有序度是 0，需要进行 $\frac{n(n-1)}{2}$ 次交换。最好情况下初始有序度是 $\frac{n(n-1)}{2}$，不需要进行交换。平均情况下，取中间值 $\frac{n(n-1)}{4}$。比较操作肯定比交换操作多，复杂度的上限是 $O(n^{2})$，所以平均情况下的时间复杂度是 $O(n^{2})$
 
 
 ### 1.2 Insertion Sort
@@ -114,7 +114,7 @@ public void selectionSort(int[] a, int n) {
             }
         }
 
-        // 交换
+        // swap
         if (min != i) {
             int tmp = a[min];
             a[min] = a[i];
@@ -238,8 +238,8 @@ $$
 
 $$
 \begin{aligned}
-n = 1 时，T(1)    &= C; \\
-n > 1 时，T(n)    &= 2 \times T(\frac{n}{2}) + n;\\
+n = 1 , T(1)    &= C; \\
+n > 1 , T(n)    &= 2 \times T(\frac{n}{2}) + n;\\
         &= 2 \times (2 \times T(\frac{n}{4}) + n/2) + n        = 4 \times T(\frac{n}{4}) + 2 \times n \\
         &= 4 \times (2 \times T(\frac{n}{8}) + n/4) + 2 \times n    = 8 \times T(\frac{n}{8}) + 3 \times n \\
         & ... \\

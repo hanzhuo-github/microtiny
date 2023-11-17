@@ -50,7 +50,7 @@ DatasetDict({
 我们得到了一个 `DatasetDict` 对象，它有 training set, validation set, 和 test set。每一个集合中包含这样几列：sentence1、sentence2、label、idx，以及行数（即数据数量）。
 
 :::tip
-缓存路径为 ~/.cache/huggingface/datasets 你可以通过设置 `HF_HOME` 环境变量来自定义缓存路径。
+缓存路径为 `~/.cache/huggingface/datasets` 你可以通过设置 `HF_HOME` 环境变量来自定义缓存路径。
 :::
 
 你可以先看看数据：
@@ -230,7 +230,7 @@ training_args = TrainingArguments("test-trainer")
 ```
 
 :::tip
-如果你想在训练过程中自动上传你的模型到 Hub 上，可以在 TrainingArguments 中传递 push_to_hub=True。我们将在 [Chapter 4](Chapter.md) 中详细介绍。
+如果你想在训练过程中自动上传你的模型到 Hub 上，可以在 TrainingArguments 中传递 push_to_hub=True。我们将在 [Chapter 4](Chapter4.md) 中详细介绍。
 :::details 🤗 官方示例 accelerate 版本错误解决方案
 在 CoLab 上运行 🤗 官方示例时，如果遇到下面的错误，
 ```:no-line-numbers

@@ -16,15 +16,15 @@ actions: [{
     link: '/blog',
     type: 'primary'
 }]
-highlights: [{
-    header: AI,
-    # image: images/avatar.svg,
-    # bgImage: images/avatar.svg,
-    highlights: [{
-        title: Hugging Face NLP,
-        link: ../ai/huggingface/index.md
-    }]
-}]
+# highlights: [{
+#     header: AI,
+#     # image: images/avatar.svg,
+#     # bgImage: images/avatar.svg,
+#     highlights: [{
+#         title: Hugging Face NLP,
+#         link: ../ai/huggingface/index.md
+#     }]
+# }]
 
 footer: <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备2023002115号-1</a></p>
 copyright: Copyright © 2023 小太阳好晒呢

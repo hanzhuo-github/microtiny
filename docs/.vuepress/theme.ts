@@ -31,6 +31,8 @@ export default hopeTheme({
     blog: true,
     mdEnhance: {
       card: true,
+      figure: true,
+      imgSize: true,
       katex: true,
       mathjax: true,
       codetabs: true,
@@ -39,6 +41,8 @@ export default hopeTheme({
       sub: true,
       // 启用上角标
       sup: true,
+      // 启用标记功能
+      mark: true,
     },
     comment: {
       provider: "Waline",
@@ -72,4 +76,10 @@ export default hopeTheme({
       headerDepth: 3,
     },
   },
+
+  encrypt: {
+    config: {
+      "/english-study/": "7834",
+    }
+  }
 })

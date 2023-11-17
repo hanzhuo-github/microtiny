@@ -3,10 +3,10 @@ import { sidebar } from 'vuepress-theme-hope';
 export const zhSidebar = sidebar({
   '/ai/': [
     {
-      text: "Hugging Face",
+      text: "Hugging Face NLP",
       collapsible: true,
-      link: "/ai/huggingface/",
-      prefix: "huggingface/",
+      link: "/ai/huggingface-nlp/",
+      prefix: "huggingface-nlp/",
       children: [
         {
           text: "👋	Hugging Face 初步",
@@ -32,6 +32,12 @@ export const zhSidebar = sidebar({
           children: "structure",
         }
       ],
+    }, {
+      text: "Deep RL",
+      collapsible: true,
+      link: "/ai/deep-rl/",
+      prefix: "deep-rl/",
+      children: "structure",
     },
     {
       text: "理论",
@@ -57,6 +63,14 @@ export const zhSidebar = sidebar({
         }
       ],
     }
+  ],
+  '/machine-learning/': [
+    {
+      text: "特征工程",
+      collapsible: true,
+      link: "/machine-learning/feature-engineering/",
+      prefix: "feature-engineering/",
+    },
   ],
   '/basic/character-encoding/': [
     "Chapter1.md",
@@ -91,5 +105,41 @@ export const zhSidebar = sidebar({
     "queue.md",
     "recursion.md",
     "sort.md",
+    "binary-search.md",
+    "skip-list.md",
+    "hash-table.md",
   ],
+  '/code/re/': [{
+    text: "正则表达式",
+    collapsible: true,
+    link: "/code/front-end/javascript/",
+    prefix: "re/",
+    children: "structure",
+  }],
+  '/english-study/spoken-english/': [
+    "types.md",
+    "expression.md",
+    "collocation.md",
+    "warm-up.md",
+  ],
+  '/english-study/spoken-english/question-bank': [
+    "qa-p1.md",
+  ],
+  '/english-study/spoken-english/breakout-room': [
+    "speed-network.md",
+  ],
+  '/english-study/spoken-english/topics': [
+    "topics.md",
+    "p1-sky-and-stars.md",
+    "p1-flowers.md",
+    "p1-TV-programmes.md",
+    "p1-wild-animals.md",
+    "p1-history.md",
+    "p1-concentration.md",
+    "p1-handwriting.md",
+    "p1-weather.md",
+  ],
+  '/other': [
+    "QA.md"
+  ]
 })
