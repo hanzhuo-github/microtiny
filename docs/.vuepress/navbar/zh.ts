@@ -57,27 +57,29 @@ export const zhNavbar = navbar([
         link: '/code/re/',
       }
     ]
-  }, {
-    text: '英语',
-    icon: 'english',
-    children: [
-      {
-        text: '口语',
-        link: '/english-study/spoken-english/',
-        children: [{
-          text: '题库',
-          link: '/english-study/spoken-english/question-bank'
-        }, {
-          text: 'topics',
-          link: '/english-study/spoken-english/topics'
-        }, {
-          text: 'Breakout Room',
-          link: '/english-study/spoken-english/breakout-room'
-        }]
-      },
+  }, 
+  // {
+  //   text: '英语',
+  //   icon: 'english',
+  //   children: [
+  //     {
+  //       text: '口语',
+  //       link: '/english-study/spoken-english/',
+  //       children: [{
+  //         text: '题库',
+  //         link: '/english-study/spoken-english/question-bank'
+  //       }, {
+  //         text: 'topics',
+  //         link: '/english-study/spoken-english/topics'
+  //       }, {
+  //         text: 'Breakout Room',
+  //         link: '/english-study/spoken-english/breakout-room'
+  //       }]
+  //     },
       
-    ]
-  }, {
+  //   ]
+  // }, 
+  {
     text: '其他',
     link: '/other',
   }
